@@ -1,5 +1,5 @@
 [project]
-name = "pt"
+name = "plot-tensor"
 version = "0.1.0"
 description = "Plot Tensor — visualize multi-dimensional arrays as faceted seaborn line plots"
 readme = "README.md"
@@ -16,5 +16,37 @@ jax = ["jax"]
 penzai = ["penzai"]
 xarray = ["xarray"]
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/plot_tensor.py" = "plot_tensor.py"
+
+[dependency-groups]
+dev = [
+    "ruff",
+    "ty",
+]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "W",    # pycodestyle warnings
+    "I",    # isort
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "RUF",  # ruff-specific
+]
+
+[tool.ty.environment]
+root = ["./src"]
+
+[tool.ty.rules]
+unresolved-import = "ignore"  # optional deps (jax, penzai, xarray) imported lazily

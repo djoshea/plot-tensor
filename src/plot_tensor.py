@@ -628,7 +628,7 @@ def line(
 
     Examples
     --------
-    >>> import numpy as np, pt
+    >>> import numpy as np, plot_tensor as pt
     >>> # 1-D: single line (time auto-detected)
     >>> pt.line(np.random.randn(100).cumsum())
 
