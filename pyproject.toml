@@ -5,7 +5,7 @@ description = "Plot Tensor — visualize multi-dimensional arrays as faceted sea
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
-authors = [{name = "Dan O'Shea", email = "djosheaREMOVE@gmail.com"}]
+authors = [{name = "Dan O'Shea", email = "djo.registrationREMOVE@gmail.com"}]
 keywords = ["plotting", "visualization", "tensor", "seaborn", "numpy", "jax"]
 classifiers = [
     "Development Status :: 3 - Alpha",
