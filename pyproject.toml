@@ -4,6 +4,20 @@ version = "0.1.0"
 description = "Plot Tensor — visualize multi-dimensional arrays as faceted seaborn line plots"
 readme = "README.md"
 requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Dan O'Shea", email = "djosheaREMOVE@gmail.com"}]
+keywords = ["plotting", "visualization", "tensor", "seaborn", "numpy", "jax"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Operating System :: OS Independent",
+]
 dependencies = [
     "numpy",
     "pandas",
@@ -15,6 +29,10 @@ dependencies = [
 jax = ["jax"]
 penzai = ["penzai"]
 xarray = ["xarray"]
+
+[project.urls]
+Homepage = "https://github.com/djoshea/plot-tensor"
+Issues = "https://github.com/djoshea/plot-tensor/issues"
 
 [build-system]
 requires = ["hatchling"]
