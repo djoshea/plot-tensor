@@ -1,0 +1,20 @@
+[project]
+name = "pt"
+version = "0.1.0"
+description = "Plot Tensor — visualize multi-dimensional arrays as faceted seaborn line plots"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+]
+
+[project.optional-dependencies]
+jax = ["jax"]
+penzai = ["penzai"]
+xarray = ["xarray"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
